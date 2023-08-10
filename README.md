@@ -71,9 +71,9 @@ Host host
 ```
 
 I recommend that you duplicate an existing host entry and modify it to suit your needs, so that `scp` and `ssh` will work as expected.
-This can easily be achieved by duplicating the host entry and changing the `Host` to something else, like `Host host_ssh`, and adding the remote command.
+This can easily be achieved by duplicating the host entry and changing the `Host` to something else, like `Host host_tmux`, and adding the remote command.
 
-In order to connect to the host, you can now simply run `ssh -t host` and you will be automatically connected to your tmux session.
+In order to connect to the host, you can now simply run `ssh -t host_tmux` and you will be automatically connected to your tmux session.
 
 
 ## Contributions
