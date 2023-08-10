@@ -13,10 +13,6 @@ while [[ $# -gt 0 ]]; do
             echo "Usage: ./install.sh [options]"
             echo "Options:"
             echo "  -h, --help      Display this help message"
-            echo "  -f, --force     Force overwrite of existing .vimrc file"
-            echo "  -v, --vim       Install for vim instead of neovim"
-            exit 0
-            ;;
         *)
             echo "Unknown option: $key"
             exit 1
@@ -28,7 +24,7 @@ echo "Installing .tmux.conf file..."
 cp .tmux.conf ~/
 
 echo "Installing tpm..."
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 
 echo "Installing poweline theme..."
 cp -r powerline/themes/ ~/.tmux/plugins/tmux-powerline/
