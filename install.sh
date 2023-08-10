@@ -25,7 +25,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 echo "Installing .tmux.conf file..."
-cp .vimrc ~/.vimrc
+cp .tmux.conf ~/
 
 echo "Installing poweline theme..."
 cp -r powerline/themes/ ~/.tmux/plugins/tmux-powerline/
