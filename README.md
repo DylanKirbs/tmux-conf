@@ -33,7 +33,7 @@ From withing tmux, run `prefix + I` to install the plugins.
 
 The script will automatically install the following plugins:
 
-- [tmp](https://github.com/tmux-plugins/tpm) - Tmux Plugin Manager
+- [tpm](https://github.com/tmux-plugins/tpm) - Tmux Plugin Manager
 - [tmux-sensible](https://github.com/tmux-plugins/tmux-sensible) - Basic tmux settings everyone can agree on, inspired by [vim-sensible](https://github.com/tpope/vim-sensible)
 - [tmux-powerline](https://github.com/erikw/tmux-powerline) - A set of scripts for making a nice and dynamic tmux statusbar consisting of segments, like vim-powerline does for vim.
 
