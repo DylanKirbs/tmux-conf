@@ -44,6 +44,37 @@ The .tmux.conf file is well-commented and easy to understand. You can easily cus
 - Changing the default prefix key from `Ctrl + b` to something else.
 - Changing additional key bindings.
 
+## Automatic Session Persistence over SSH
+
+This section will detail how to set up a very simple automatic session persistence over SSH. This is useful for when you are working on a remote machine and you want to be able to disconnect and reconnect to your session without losing your work.
+
+It only requires client-side configuration, and it will work with any server-side configuration.
+
+### Client-side Configuration
+
+Add the following to your `~/.ssh/config` file:
+- `RemoteCommand tmux -u new -A -s ${USER}_SSH` - This will automatically start a tmux session named `${USER}_SSH` when you connect to the host.
+
+The breakdown of the command is as follows:
+- `tmux` - Start a tmux session.
+- `-u` - Use UTF-8 encoding.
+- `new` - Create a new session.
+- `-A` - Attach to the session if it already exists.
+- `-s ${USER}_SSH` - Name the session `${USER}_SSH`.
+
+It should look something like this:
+```
+Host host
+  HostName hostname
+  User username
+  RemoteCommand tmux -u new -A -s ${USER}_SSH
+```
+
+I recommend that you duplicate an existing host entry and modify it to suit your needs, so that `scp` and `ssh` will work as expected.
+This can easily be achieved by duplicating the host entry and changing the `Host` to something else, like `Host host_ssh`, and adding the remote command.
+
+In order to connect to the host, you can now simply run `ssh -t host` and you will be automatically connected to your tmux session.
+
 
 ## Contributions
 
