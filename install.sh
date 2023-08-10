@@ -27,6 +27,9 @@ done
 echo "Installing .tmux.conf file..."
 cp .tmux.conf ~/
 
+echo "Installing tpm..."
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 echo "Installing poweline theme..."
 cp -r powerline/themes/ ~/.tmux/plugins/tmux-powerline/
 
