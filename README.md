@@ -1,68 +1,49 @@
-# Kirby VIMRC Configuration
+# Kirby TMUX Configuration
 
 ## Overview
 
-Welcome to the world of efficient text editing with Vim! This project offers a streamlined VIMRC configuration file, designed to enhance your Vim experience. If you're new to Vim, a VIMRC is a user-specific configuration file that holds custom settings and preferences for your Vim editor. By using this VIMRC, you can quickly optimize your Vim environment without delving into the complexities of manual configuration.
+This repository contains a simplified TMUX configuration file, which is designed to be easy to understand and well-commented. It's a great starting point for anyone who wants to customize their TMUX environment.
 
-## What is a VIMRC?
+## What is a .tmux.conf?
 
-A VIMRC (Vim Run Commands) is a plain text file that houses a collection of Vim settings, key mappings, plugins, and other customizations. It's your personal control center for tailoring Vim to your liking, making it an essential part of your Vim setup.
+A TMUX configuration file is a plain text file that contains instructions for customizing your TMUX environment. It's often referred to as a "TMUX configuration" or "TMUX config" for short. The file name is `.tmux.conf` and it's typically stored in your home directory.
 
 ## Getting Started
 
-Setting up your Vim environment with this simplified VIMRC is straightforward:
+Setting up your Tmux environment with this simplified tmux is straightforward:
 
-This Repository contains two important files:
-- `.vimrc` - The VIMRC file.
-- `init.vim` - The additional VIMRC file for Neovim.
+This Repository contains the configuration file:
+- `.tmux.conf` - The configuration file.
 
 As well as an installation script:
 - `install.sh` - The installation script.
 
-Either copy the `.vimrc` to your home directory (and the `init.vim` to `.config/nvim/init.vim` if you are using Neovim) or run the installation script, which does it for you.
-
 ```bash
-# Plain Vim installation
 $ ./install.sh
-
-# Neovim installation
-$ ./install.sh --neovim
 ```
 
-It is recommended to use the installer as it will source the VIMRC for you.
+It is recommended to use the installer as it will source the configuration for you.
 
-That's it! Your Vim environment is now equipped with the enhanced settings and optimizations provided by the VIMRC file.
+That's it! Your TMUX environment is now equipped with the enhanced settings and optimizations provided by the .tmux.conf file.
 The script is designed to automatically perform some setup and install some plugins, all of this can be modified and all of the sections are labeled with comments.
 
-Use `zo` to open a fold and `zc` to close it, when you are in normal mode.
+From withing tmux, run `prefix + I` to install the plugins.
 
 ## Features
 
 The script will automatically install the following plugins:
 
-- [vim-plug](http://www.github.com/junegunn/vim-plug) - A minimalist Vim plugin manager.
-- [powerline](http://www.github.com/powerline/powerline) - A statusline plugin for Vim.
-- [vim-airline](http://www.github.com/vim-airline/vim-airline) - A lightweight status/tabline for Vim.
-- [vim-airline-themes](http://www.github.com/vim-airline/vim-airline-themes) - A collection of themes for vim-airline.
-- [vim-fugitive](http://www.github.com/tpope/vim-fugitive) - A Git wrapper so awesome, it should be illegal.
-- [ale](http://www.github.com/dense-analysis/ale) - Asynchronous Lint Engine.
-- [nerdtree](http://www.github.com/preservim/nerdtree) - A tree explorer plugin for Vim.
-
-As well as the following colorschemes:
-
-- [Molokai](http://www.github.com/tomasr/molokai) - A port of the monokai theme for TextMate.
+- [tmp] - A plugin manager for tmux.
+- [tmux-sensible] - A set of tmux options that should be acceptable to everyone.
+- [tmux-powerline] - A set of scripts for making a nice and dynamic tmux statusbar consisting of segments, like vim-powerline does for vim.
 
 ## Customization
 
-Feel free to explore the VIMRC file you've downloaded. It's a plain text file, so you can modify it using any text editor. Within the VIMRC, you'll find comments that explain various sections. If you're comfortable with Vimscript, you can tailor the settings to match your preferences.
+The .tmux.conf file is well-commented and easy to understand. You can easily customize it to suit your needs. Here are some of the most common customizations:
 
-## Screenshots
+- Changing the default prefix key from `Ctrl + b` to something else.
+- Changing additional key bindings.
 
-![Image of VIMRC](/attachements/vimrc.png)
-An image of the VIMRC file.
-
-![Output from ALE](attachements/ALE-Details.png)
-An example of the output from ALE.
 
 ## Contributions
 
@@ -70,12 +51,12 @@ If you'd like to contribute to this project by suggesting improvements, fixing i
 
 ## Feedback and Support
 
-If you encounter any problems or have questions about using this VIMRC configuration, feel free to reach out by creating an issue in this repository. We're here to help you make the most of your Vim editing experience!
+If you encounter any problems or have questions about using this tmux configuration, feel free to reach out by creating an issue in this repository. We're here to help you make the most of your tmux editing experience!
 
 ## License
 
-This project is released under the [MIT License](LICENSE), which means you're free to use, modify, and distribute the VIMRC configuration. Refer to the license file for more details.
+This project is released under the [MIT License](LICENSE), which means you're free to use, modify, and distribute the tmux configuration. Refer to the license file for more details.
 
-Happy Vimming!
+Happy tmuxing!
 
 ---
