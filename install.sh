@@ -28,7 +28,7 @@ echo "Installing .tmux.conf file..."
 cp .vimrc ~/.vimrc
 
 echo "Installing poweline theme..."
-cp -r powerline/themes/ ~/.tmux/plugins/tmux-powerline/themes/
+cp -r powerline/themes/ ~/.tmux/plugins/tmux-powerline/
 
 # source the .tmux.conf file
 echo "Run the command in tmux to source .tmux.conf file..."
