@@ -1,9 +1,14 @@
 #!/bin/bash
-
 # This script will install and set up the .tmux.conf
 # Usage: ./install.sh [options]
 # Options:
 #   -h, --help      Display this help message
+
+function cprint() {
+    # Usage: cprint <text> <r> <g> <b>
+    
+    echo -e "\033[38;2;${2};${3};${4}m${1}\033[0m"
+}
 
 # Parse arguments
 while [[ $# -gt 0 ]]; do
@@ -15,17 +20,13 @@ while [[ $# -gt 0 ]]; do
             echo "  -h, --help      Display this help message"
             ;;
         *)
-            echo "Unknown option: $key"
+            cprint "Unknown option: $key" 255 0 0
             exit 1
             ;;
     esac
 done
 
-function cprint() {
-    # Usage: cprint <text> <r> <g> <b>
-    
-    echo -e "\033[38;2;${2};${3};${4}m${1}\033[0m"
-}
+
 
 # Making sure system requirements are met
 cprint "Checking system requirements..." 255 255 0
