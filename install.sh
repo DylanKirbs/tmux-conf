@@ -30,7 +30,7 @@ done
 
 # Making sure system requirements are met
 cprint "Checking system requirements..." 255 255 0
-sudo apt update
+# sudo apt update
 sudo apt install git
 sudo apt install tmux
 
